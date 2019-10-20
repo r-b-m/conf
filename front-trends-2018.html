@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>reveal.js - The HTML Presentation Framework</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+    <meta name="robots" content="noindex">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="shortcut icon" href="http://knightlab.northwestern.edu/wp-content/themes/responsive-kl-child-theme/favicon.ico">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="//cloud.webtype.com/css/d4767ecb-457a-4677-8761-72f890add836.css">
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/knightlab.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+<style media="screen">
+	body {
+		text-align: left;
+	}
+</style>
+
+<body>
+
+	<div class="reveal">
+            <a href="index.html" class="sign_board__link">
+        <div class="sign_board">
+            
+            <div class="arrow"></div>
+            <div class="door">
+                <div class="man">
+                    <div class="head"></div>
+                    <div class="torso"></div>
+                    <div class="hand"></div>
+                    <div class="hand right"></div>     
+                    <div class="leg"></div>
+                    <div class="leg right"></div>
+                </div>
+            </div>
+            <div class="text">more confs!</div>
+        </div>
+    </a>
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Front-Trends 2018</h1>
+				<br><small>Konspekt</small><br>
+				<h3>May 24-25, 2018 in Warsaw, Poland</h3>
+				<p>
+					<small>Created by Roland Mandzolo</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Front-trends.conf</h2>
+				<p>
+					Front-trends.conf osalesin esimest korda. Tegu on ühe suurima Web Tehnoloogia üritusega. Osa võtsid tehnoloogia teemal tuntud esinejad, keda oli inspireeriv kuulata nt: Jeremy Keith (adactio), Serg Hospodarets, (Lead Front-End Developer based
+					in Dublin), Sarah Drasner (Senior Developer Advocate at Microsoft).
+					<br> <small>Lisi Linhart (One of The Front-Trends Speaker)</small><br>
+					<img src="img.jpg" alt="" width="200px" height="AUTO">
+				</p>
+
+
+				<aside class="notes">
+					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+				</aside>
+			</section>
+
+			<section>
+				<h2>Maja Wichrowsaka </h2>
+				<br><small>(frontend software engineer at Airbnb)</small><br>
+				<p>
+					Sessioon oli huvitav, eriti neile keda puudutas React framework. Probleem, mis püstitati seisnes selles, et kuidas muuta Airbnb kasutajatele (UI) lehe paremalt vasakule lugemist nt:(Hebrew, Urdu, Arabic [Muide seda keelt räägitakse täna 60% maailmas]).
+				</p>
+			</section>
+
+
+			<section data-markdown>
+				<script type="text/template">
+					## Maja Wichrowsaka
+					<br><small>(frontend software engineer at Airbnb)</small><br>
+					Toodud oli välja lahenduseks css stiilid nt: float..jne vastavalt läbi ülivana [DIR] attribute.
+
+					 ```
+
+					<html dir="rtl" class="rtl">
+					<head>
+						<style>
+							html[class*="rtl"] body {
+								background-color: blue;
+							}
+
+							html[class*="rtl"] div {
+								background-color: green;
+							}
+						</style>
+						</haed>
+						<body>
+							<div></div>
+						</body>
+					</html>
+
+					```
+				</script>
+
+			</section>
+
+			<section>
+				<h2>Sarah Drasner</h2>
+				<br><small>Live and machine learn</small><br>
+				<p>
+					Everything we see online is filtered.
+				</p>
+			</section>
+
+			<section>
+				<h2>what makes algorithms fail?</h2>
+				<br><small>Live and machine learn</small><br>
+				<ul class="clear">
+					<li>No transparancy</li>
+					<li>It doesn't adopt over time</li>
+					<li>it's used withpout questioning</li>
+				</ul>
+				<p>The type of data we use is vital to the accuracy of our algorithms</p>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+				## David Kopal</h2>
+				<br><small>HOC - Higher-Order Components</small><br>
+				<small>Selles sessioonis näidati mõningad näited Reacti baasil, kuidas teha paremat koodi struktuuri, ehitades componentide põhjal.
+				Use to separate logic from presentation and archieve greater reusability. Wrappers around components that add behavior or state and return enhancedComponent.</small>
+				```
+				// not reusable
+
+				const withFilterPromps = BaseComponent =>
+				({ list, side }) => {
+					const transformedProps = list.filter(char => char.side === side)
+					return <BaseComponent list={transformedProps} />
+				}
+
+				// reusable
+
+				const withFilterPromps = transformFunc =>
+				BaseComponent => aseProps => {
+					const transformedProps = transformFunc(baseprops)
+					return <BaseComponent { ... transformedProps} />
+				}
+
+				```
+				</script>
+			</section>
+
+
+
+			<section data-markdown>
+				<script type="text/template">
+					## David Kopal</h2>
+					<br><small>HOC - Higher-Order Components</small><br>
+
+					```
+						const withFilterPromps = transformFunc =>
+						BaseComponent => aseProps => {
+							const transformedProps = transformFunc(baseprops)
+							return <BaseComponent { ... transformedProps} />
+						}
+						const DisplayList = ({ list }) =>
+						list.map( char => <div> { /* render UI */ } <div>)
+
+						const FilteredList = withTransformProps(
+						({ list,  side }) => ({
+							list: list.filter (char => char.side === side)
+						}))(DisplayList)
+
+						Render(<FilteredList side="dark" List={SWchars} />)
+
+					```
+				</script>
+			</section>
+			<section>
+
+					<h2>Serg Hospodarets</h2>
+					<p><br><small>Native JavaScript modules</small><br>
+					<small>ESM</small> <br></p>
+					<h5>ESM are "singletons"
+They are loaded and executed only once
+even if imported via different paths or methods</h4>
+					<img src="ecmascript_modules.jpg" alt="" width="500px" height="AUTO">
+
+			</section>
+			<section>
+
+					<h2>Serg Hospodarets</h2>
+					<p><br><small>Native JavaScript modules</small><br>
+					<small>script tag support today</small> <br></p>
+					<a href="	https://caniuse.com/#search=script" target="_blank">caniuse</a><br>
+					<a href="https://hospodarets.com/native-ecmascript-modules-the-first-overview" target="_blank">lisainfo</a><br>
+					<img src="script.jpg" alt="" width="600px" height="AUTO">
+
+			</section>
+			<section>
+
+					<h2>Serg Hospodarets</h2>
+					<p><br><small>Native JavaScript modules</small><br>
+					<small>Table of module systems comparison</small> <br></p>
+					<img src="esm.jpg" alt="" width="600px" height="AUTO">
+
+			</section>
+			<section>
+
+					<h2>Serg Hospodarets</h2>
+					<p><br><small>Native JavaScript modules</small><br>
+					<small>ESM in node.js</small> <br></p>
+					<img src="mjs.jpg" alt="" width="600px" height="AUTO">
+
+			</section>
+			<section>
+				<h2>Serg Hospodarets</h2>
+				<p><br><small>Native JavaScript modules</small><br>
+				<small>ESM Features</small> <br></p>
+				<ul>
+					<li>Modules have own scopes and contexts, the same time having access to the global scope</li>
+					<li>imports are immutable references and cannot be reassigned</li>
+					<li>'import' hoisting, top level only</li>
+					<li>use script has browser by default</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Serg Hospodarets</h2>
+				<p><br><small>Native JavaScript modules</small><br>
+				<small>ESM path</small> <br></p>
+				<ul>
+					<li>must be a full URL (include extension)</li>
+					<li>must be an absolute URL or:</li>
+					<li>must start with “/”, “./”, or “../”</li>
+				</ul><br>
+				<ul>
+					<li>cannot be dynamic for static imports</li>
+					<li>no extensions resolutions</li>
+					<li>no Node.js node_modules etc. resolutions</li>
+					<li>Possible solutions: Service Worker URLs proxy- quite complex</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Peter Müller</h2>
+				<p><br><small>High performance web fonts</small></p><br>
+				<img src="loaded_fonts.jpg" alt="" width="600px" height="AUTO">
+			</section>
+			<section>
+				<h2>Peter Müller</h2>
+				<p><br><small>High performance web fonts</small></p><br>
+				<img src="preloaded_fonts.jpg" alt="" width="600px" height="AUTO">
+			</section>
+			<section>
+				<h2>Peter Müller</h2>
+				<p><br><small>High performance web fonts</small><br></p>
+					<ul>
+						<li>Self-host Google Fonts</li>
+						<li>Create Font Subsets</li>
+						<li>Preload Subsets</li>
+						<li>CSS Font Loading API (Preload Fallback)</li>
+						<li>Graceful Superset Fallback</li>
+					</ul><br>
+					<p>Selleks, et tagada kiirust toodi välja selles sessionis <a href="https://www.npmjs.com/package/subfont">Subfont</a></p>
+					Kuid vältida seda kasutamist järgnevalt:
+					<ul>
+						<li>Dynamic server content</li>
+						<li>Critical dynamic JS content</li>
+						<li>No build step</li>
+						<li>Using Typekit, Webtype, Fontspring</li>
+						<li>Your font license doesn't allow subsetting</li>
+					</ul>
+			</section>
+			<section>
+				<h2>Peter Müller</h2>
+				<p><br><small>High performance web fonts</small><br></p>
+				<p>Preload põhimõte on anda teada browserile ette milliseid font faile läheb vaja teatud rakenduse osas ning et tagada paremat kiirust laadimisel.</p>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br>
+				<small>ESM path</small> <br></p>
+				<p>Every layer consumes memory. Use them wisely</p>
+				<h5>Laadise järjekord:</h5>
+				<ul>
+					<li>Javascript</li>
+					<li>Recalculate Styles</li>
+					<li>Layout  {background-color, box-shadow, background-image}</li>
+					<li>Paint {transform, opacity}</li>
+					<li>Composite Layers</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br>
+				<small>browser  normally</small> <br></p>
+				<p>60fps - 1000/60 = ~16.6ms</p>
+				<p>120fps - 1000/120 = ~8.3ms (iPod pro, Razer smartphones)</p>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br>
+				<small>browser  normally</small> <br></p>
+				<p>Animate only transform and opacity if possible</p>
+				<p>120fps - avoid requestAnimationFrame</p>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br></p>
+				<p><a href="https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas" target="_blank">Simplify Paint Complexity and Reduce Paint Areas</a></p>
+				<p><a href="https://developers.google.com/web/updates/2016/12/performant-parallaxing" target="_blank">Performant Parallaxing</a></p>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br></p>
+				<p>Use will-change property (or transform: translate3D(0,0,0)) to avoid repainting </p>
+				<p><a href="https://dev.opera.com/articles/css-will-change-property/" target="_blank">Everything You Need to Know About the CSS will-change Property</a></p>
+				<p><a href="https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="
+					">How Browsers Work</a></p>
+			</section>
+			<section>
+				<h2>Anna Migas</h2>
+				<p><br><small>Fast but not furious</small><br>
+				<small>scroll</small> <br></p>
+				<img src="scroll_event.jpg" width="600px" height="AUTO">
+			</section>
+			<section>
+				<h2>Jeremy Keith</h2>
+				<p><br><small>The layers of the web</small><br></p>
+				<small>Sessioon meeldis mulle väga, kuna see oli hästi esitatud ning välja olid toodud webi suuremad põhitõed.</small>
+				<small>Uue tehnoloogia kasutusele võtmist tuleks valida targalt, kuna tulevikus see sama tehnoloogia võidakse tõenäoliselt asendada millegi muu vastu. Samas, kui kaugemale mõelda, siis alumine layer jääb alati, kuna ülemine layer täiustab pidevalt alumist layerit. Tuleks arvestada ning kaaluda pikaajaliste instrumentide kasutamist ehitamisel.</small>
+				<img src="layers.jpg" alt="" width="400px" height="AUTO">
+			</section>
+			<section>
+				<h2>Jeremy Keith</h2>
+				<p><br><small>The layers of the web</small><br></p>
+					<a href="https://resilientwebdesign.com/chapter5/#Each%20of%20the%20web%E2%80%99s%20shearing%20layers%20can%20be%20peeled%20back%20to%20reveal%20a%20layer%20below.%20Running%20that%20process%20in%20reverse%E2%80%94applying%20each%20layer%20in%20turn%E2%80%94is%20a%20key%20principle%20of%20resilient%20web%C2%A0design." target="_blank">Layers</a>
+				<p>Each of the web’s shearing layers can be peeled back to reveal a layer below. Running that process in reverse—applying each layer in turn—is a key principle of resilient web design.</p>
+			</section>
+			<section>
+				<h2>Lisi Linhart</h2>
+				<p><br><small>Delightful SVG</small><br>
+					<ul>
+						<li>Use an SVG animation library like <a href="https://greensock.com/gsap" target="_blank">GSAP</a></li>
+						<li>Splitting SVG</li>
+						<li>use <a href="https://caniuse.com/#search=variables" target="_blank">css variables</a></li>
+						<li>add <a href="https://caniuse.com/#search=requestanimation" target="_blank">requestAnimationFrame</a></li>
+						<li>use <a href="https://css-tricks.com/between-the-lines/" target="_blank">linear interpolation</a></li>
+					</ul>
+			</section>
+			<section>
+				<h2>Jo Franchetti</h2>
+				<p><br><small>PWA</small><br></p>
+					<br><small>Push Notification</small><br>
+					<ul>
+						<li>Notification Api</li>
+						<li>Requere permission from the user</li>
+						<li>Only send relevant messages</li>
+					</ul>
+			</section>
+			<section>
+				<h2>Jo Franchetti</h2>
+				<p><br><small>PWA</small><br></p>
+					<br><a href="https://docs.pwabuilder.com/" target="_blank">Doc</a><br>
+					<ul>
+						<li>Small size</li>
+						<li>Access to web APIs</li>
+						<li>Service workers</li>
+						<li>Served over HTTPS</li>
+						<li>Responsive</li>
+						<li>Progressive enhancement</li>
+					</ul>
+			</section>
+			<section>
+				<h2>Patrick Hamann</h2>
+				<p><br><small>To push, or not to push? (HTTP/2)</small><br></p>
+				<img src="web.jpg" alt="" width="400px" height="AUTO">
+				<img src="preload.jpg" alt="" width="400px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Patrick Hamann</h2>
+				<p><br><small>To push, or not to push? (HTTP/2)</small><br></p>
+				<ul>
+					<li>PRPL - needs service workers <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/" target="_blank">PRPL</a></li>
+					<li>Critical resources can be hidden</li>
+					<li>Connection Cost</li>
+					<li>Loading performance is hightly connected to latency
+						(Latency: Latency is delay. Latency is how long it takes data to travel between its source and destination, measured in milliseconds.)
+					</li>
+				</ul>
+			</section>
+
+
+			<section>
+			    <h5>Kokkuvõtteks</h5>
+				<small>Üritus oli väga inspireeriv, avas mõttemaailma ning innustas teadmisi rikastama.</small>
+				<small>Roland</small>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [{
+					src: 'lib/js/classList.js',
+					condition: function() {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: 'plugin/markdown/marked.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'plugin/markdown/markdown.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: 'plugin/zoom-js/zoom.js',
+					async: true,
+					condition: function() {
+						return !!document.body.classList;
+					}
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true,
+					condition: function() {
+						return !!document.body.classList;
+					}
+				}
+			]
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>reveal.js - The HTML Presentation Framework</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+	<meta name="robots" content="noindex">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="shortcut icon"
+		href="http://knightlab.northwestern.edu/wp-content/themes/responsive-kl-child-theme/favicon.ico">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="//cloud.webtype.com/css/d4767ecb-457a-4677-8761-72f890add836.css">
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/knightlab.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+<style media="screen">
+	body {
+		text-align: left;
+	}
+</style>
+
+<body>
+
+	<div class="reveal">
+		<a href="index.html" class="sign_board__link">
+			<div class="sign_board">
+
+				<div class="arrow"></div>
+				<div class="door">
+					<div class="man">
+						<div class="head"></div>
+						<div class="torso"></div>
+						<div class="hand"></div>
+						<div class="hand right"></div>
+						<div class="leg"></div>
+						<div class="leg right"></div>
+					</div>
+				</div>
+				<div class="text">more confs!</div>
+			</div>
+		</a>
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Nordic.js 2019</h1>
+				<br><small>Konspekt</small><br>
+				<h3>Magasin 9 — Stockholm
+					10 — 11 October 2019</h3>
+				<p>
+					<small>Created by Roland Mandzolo</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Nordic.js</h2>
+				<p>
+					My theory in anything you do is to keep exploring, keep digging deeper to find new stuff. Blythe
+					Danner <br>
+					Valisin sellise tsitaadi kuna iseloomustab hästi nordicjs 2019 ürituse avamise kõned mida publikule
+					jagati.
+				</p>
+			</section>
+
+			<section>
+				<h2>David Khourshid </h2>
+				<br><small>Mind-Reading with Adaptive and Intelligent User Interfaces</small><br>
+				<p>
+					UIs can be developed in such a way that it automatically adapts to the user's behavior.
+				</p>
+			</section>
+			<section>
+				<h2>David Khourshid </h2>
+				<br><small>Mind-Reading with Adaptive and Intelligent User Interfaces</small><br>
+				<p>
+					Selles sessionis räägiti palju statement-idest kuna läbi selle saame defineerida kasutaja käitumist.
+					<br>
+					teooria põhialus seisnes sellest, et läbi UI on võimalik korduvate kasutaja käitumisest järeldada
+					põhi suund kuidas või millal lõpp tulemuseni jõutakse. Selleks,
+					et saavutada eesmärki lõpp tulemuses, mis on püstitatud teatud kasutajale. kõik võimalik siiski läbi
+					UI muudatuste teatud statement-ides ning kasutades eelnevalt analüüsitud kasutaja korduv käitumist.
+				</p>
+			</section>
+			<section>
+				<h2>David Khourshid </h2>
+				<br><small>Mind-Reading with Adaptive and Intelligent User Interfaces</small><br>
+				<p>
+					Lugemiseks: seoses statement / Millised meetodid on võimalik kasutada koodi mõistes
+					<a href=" https://www.nikpro.com.au/using-object-literals-and-map-method-instead-of-the-old-switch-statement/"
+						target="_blank">statement</a>
+				</p>
+			</section>
+
+			<section>
+				<h2>Mark Volkmann </h2>
+				<br><small>Simplify Web App Development with Svelte</small><br>
+				<p>
+
+					Tutvustati javascript <strong>framework</strong> <a href="https://svelte.dev/docs"
+						target="_blank">SVELT</a> <br>
+					Võrreldes teiste frameworkida Svelt näitas oma võimed
+					1.Top-level variable on just kui component state kui kasutada htmlis
+					2. Ei kaalu palju. Small bundle size <br>
+					<img src="svelt.jpg" alt="" width="214px" height="AUTO">
+				</p>
+
+
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+					A property descriptor holds internal metadata each property on a JS object
+				</p>
+			</section>
+
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+					Objecti propertis on kaasas property descriptor
+					mis iseloomustab end omakorda neli erinevat <strong>keys:</strong>
+					value , writable, enumerable ja configurable
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"
+						target="_BLANK">Object.defineProperty()</a>
+
+				</p>
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+					Objecti same kategoriseerida: <br>
+					<strong> data property </strong>saab olla string ,number, another object ja ka another function ehk
+					(value , writable) <br>
+					<strong> accessor property </strong> tal on key: set nagu (data property key: writable) ja get nagu
+					(data property key: value) nad ei saa olle koos kombineeritud, sest siis me ei tea milline on õige
+					väärtus.
+
+
+				</p>
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+					<strong> Getters and setters</strong> tänu versioon 5.1 (2011) javascriptile objektil sellised
+					omadused mida polnud
+					javascript version 3 probleem seisnes sellest oli vaja pidevalt uuesti käivitada (invoke) objecti
+					funktsiooni selleks, et saada returned value.
+					<strong> Get ja set </strong> lahendas dot süntaksiga selleks, et käivitada (invoke) koheselt
+
+				</p>
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+					Objecti saame manipuleerida läbi <strong> enumerable </strong> ( kui true siis property descriptor
+					on ka saadaval isegi näiteks kui on loopi sees või object.dot key puhul) ja <strong> configurable
+					</strong> (kas on property descriptor muudetav true/false ) mõlemad saavad olla data property kui ka
+					accessor property
+
+					<br>
+					<strong> Extensible properties </strong> can be added to the object (Annab meile võimalust objektile
+					muutusi teha objecti üld tasadil kui ka property descriptor tasandil)
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible"
+						target="_blank">Object.isExtensible()</a>
+				</p>
+
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+
+
+				<img src="object.jpg" alt="" width="214px" height="AUTO">
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+					<br>
+					Properties with other javascript objects as the value need to be frozen explicitly (paneb object
+					property descriptor-ile automaatselt false writable-le kui ka configurable-le)
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze"
+						target="_blank">Object.freeze()</a>
+					<br>
+					<br> <a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal">Object.seal()</a>
+					(paneb object property descriptor-ile automaatselt writable-le annab true ja configurable-le false)
+
+				</p>
+			</section>
+			<section>
+				<h2>Vaidehi Joshi </h2>
+				<br><small>What we talk about when we talk about the JavaScript object model</small><br>
+				<p>
+
+
+					<br> <a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods"
+						target="_blank">Comparing Reflect and Object methods</a>
+
+				</p>
+			</section>
+
+
+
+
+
+			<section>
+				<h2>Eva Ferreira</h2>
+				<br><small>Take on me, web browsers!</small><br>
+
+				<p>Selle esitluse puhul oli <strong>Fun Fact:</strong> Tegi ennast nähtamatuks läbi CSS muudates
+					rohelise võ sinise värviga tausta.</p>
+				<img src="invisible.png" alt="" width="500px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Isabela Moreira</h2>
+				<br><small>Localization: Implementation and Testing... Locally</small><br>
+
+				<img src="localization.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>Isabela Moreira</h2>
+				<br><small>Localization: Implementation and Testing... Locally</small><br>
+				<p>Siin tõi Ta välja <strong>Fun Fact:</strong> Kui tähtis on tegelikult localiseerumine</p>
+				<img src="localization-important.png" alt="" width="500px" height="AUTO">
+				<p>KFC Tuues Hiina turule failiti slooganiga otse tõlkes hiina keelde oli välja tootud "Eat your fingers
+					off"</p>
+			</section>
+			<section>
+				<h2>Isabela Moreira</h2>
+				<br><small>Localization: Implementation and Testing... Locally</small><br>
+				<p>Point mida tahtis tuua sisse on näiteks kui implementeerida mingit functsioonaalsust uue rakendusse
+					siis peaks supportima ka selle rakenduse iseärasusi ja üld tulemust saada läbi localization-i</p>
+			</section>
+			<section>
+				<h2>Isabela Moreira</h2>
+				<br><small>Localization: Implementation and Testing... Locally</small><br>
+				<p>Probleem võib tulla siin keelte tõlkes</p>
+				<img src="localization-implementation.png" alt="" width="500px" height="AUTO">
+				<p>Localization includes not just translating strings and numbers but also includes thinkig about how we
+					deal with symbols and images</p>
+			</section>
+			<section>
+				<h2>Isabela Moreira</h2>
+				<br><small>Localization: Implementation and Testing... Locally</small><br>
+				<img src="localization-wrapup.png" alt="" width="500px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<p>Tutvustas publikule typescripti ning kuidas on keel ajalooliselt arenenud paremaks</p> <br>
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<p>Difference between TypeScript and JavaScript: TypesScript is known as Object oriented programming
+					language whereas JavaScript is a scripting language. <br> TypeScript has a feature known as Static
+					typing but JavaScript does not have this feature.</p>
+				<br>
+				<p>TypeScript has Interface but JavaScript does not have Interface. <br>
+					TypeScript support optional parameter function but JavaScript does not support optional parameter
+					function.</p>
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<p>in TypeScript variable can contain of more the one type of value</p>
+				<img src="typescript-multi.png" alt="" width="600px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<p> An interface defines the syntax that any entity must adhere to. Interfaces define properties,
+					methods, and events, which are the members of the interface.</p>
+				<img src="typescript.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<a href="https://basarat.gitbooks.io/typescript/docs/javascript/null-undefined.html"
+					target="_blank">Null and Undefined</a> <br>
+				<img src="typescript-null.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html"
+					target="_blank">Typescript 2.0</a> <br>
+				<img src="typescript-2.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html"
+					target="_blank">Typescript 2.0</a> <br>
+				<img src="typescript-2.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<a href="https://itnext.io/typescript-3-0-what-has-come-19f81d1fac60" target="_blank">Typescript 3.0</a>
+				<br>
+			</section>
+			<section>
+				<h2>Shelley Vohr</h2>
+				<br><small> API Modernization: Building Bridges As You Cross Them </small><br>
+				<p></p>
+				<img src="semantic-versioning.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Shelley Vohr</h2>
+				<br><small> API Modernization: Building Bridges As You Cross Them </small><br>
+				<p></p>
+				<img src="versioning.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Shelley Vohr</h2>
+				<br><small> API Modernization: Building Bridges As You Cross Them </small><br>
+				<p></p>
+				<img src="lang-versioning.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Godfrey Chan</h2>
+				<br><small>Thinking in TypeScript</small><br>
+				<p>backward competitive</p>
+				<a href="https://medium.com/@theflyingmantis/callbacks-vs-promises-and-basics-of-js-80d3d1515e81"
+					target="_blank">Callbacks Vs Promises</a> <br>
+			</section>
+			<section>
+				<h2>Piérre Reimertz </h2>
+				<br><small>Gettin’ into the (Tensor)Flow</small><br>
+				<p>Mulle meeldis Piérre esitlus kuna ta esitas selle teema huvitavalt</p>
+
+			</section>
+			<section>
+				<h2>Piérre Reimertz </h2>
+				<br><small>Gettin’ into the (Tensor)Flow</small><br>
+				<P>Läbi hand bot tõi ta välja, et kui lahe oleks kui saaks kasutaja harjumist kuulata ning nihutada ui
+					vastavalt kasutaja harjumistest
+					<br> Hand bot puhul oskab kuulata kas on tegu vasakukäe kasutajaga või parema</P>
+				<img src="hand-bot.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>Piérre Reimertz </h2>
+				<br><small>Gettin’ into the (Tensor)Flow</small><br>
+				<img src="artifical-network.png" alt="" width="700px" height="AUTO">
+			</section>
+			<section>
+				<h2>Piérre Reimertz </h2>
+				<br><small>Gettin’ into the (Tensor)Flow</small><br>
+				<p>Neid bote võivad olla erinevad ja erineva eesmärkiga</p>
+				<img src="artifical-sensors.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>James Simpson </h2>
+				<br><small>Building Distributed Systems with Node.js</small><br>
+				<a href="https://www.citrix.com/glossary/load-balancing.html">What is load balancing?</a>
+			</section>
+			<section>
+				<h2>James Simpson </h2>
+				<br><small>Building Distributed Systems with Node.js</small><br>
+				<a href="https://www.citrix.com/glossary/load-balancing.html">What is load balancing?</a>
+			</section>
+			<section>
+				<h2>James Simpson </h2>
+				<br><small>Building Distributed Systems with Node.js</small><br>
+				<img src="distributed-systems.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>James Simpson </h2>
+				<br><small>Building Distributed Systems with Node.js</small><br>
+				<img src="distributed-systems.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>James Simpson </h2>
+				<br><small>Building Distributed Systems with Node.js</small><br>
+				<img src="distributed-systems-app.png" alt="" width="500px" height="AUTO">
+				<img src="distributed-systems-messaging.png" alt="" width="500px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Talia Nassi </h2>
+				<br><small>Testing in Production</small><br>
+				<p>Toi välja selle esitlusega seda, et tuleks läbi feature teste (feature flagging) lisada teste vastu
+					live rakendus keskkonda mitte ainult stage ja testkeskkonda
+
+					<br> Staging ei saa olla samaväärne live keskkonnaga data ja kasutajate suhtes. Lõpuks live keskkond
+					on seda mida hinnatakse Kokkuvõtteks seega tuleks seda testida
+				</p>
+			</section>
+			<section>
+				<h2>Talia Nassi </h2>
+				<br><small>Testing in Production</small><br>
+				<img src="production-testing.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>Talia Nassi </h2>
+				<br><small>Testing in Production</small><br>
+				<p>Toi välja selle esitlusega seda, et tuleks ka teste lisada vastu live rakendust mitte ainult stage ja
+					testkeskkonda</p>
+				<img src="production-tools.png" alt="" width="500px" height="AUTO">
+			</section>
+			<section>
+				<h2>Talia Nassi </h2>
+				<br><small>Testing in Production</small><br>
+				<img src="pretesting.png" alt="" width="800px" height="AUTO">
+			</section>
+			<section>
+				<h2>Talia Nassi </h2>
+				<br><small>Testing in Production</small><br>
+				<img src="alltest.png" alt="" width="800px" height="AUTO">
+			</section>
+			<section>
+				<h2>Katie Fenn</h2>
+				<br><small>Memory: Don't Forget to Take Out the Garbage</small><br>
+				<img src="callback.png" alt="" width="800px" height="AUTO">
+			</section>
+			<section>
+				<h2>Katie Fenn</h2>
+				<br><small>Memory: Don't Forget to Take Out the Garbage</small><br>
+				<img src="event-handlers.png" alt="" width="800px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Katie Fenn</h2>
+				<br><small>Memory: Don't Forget to Take Out the Garbage</small><br>
+				<img src="allocation.png" alt="" width="500px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Katie Fenn</h2>
+				<br><small>Memory: Don't Forget to Take Out the Garbage</small><br>
+				<img src="deallocation.png" alt="" width="500px" height="AUTO">
+			</section>
+
+
+			<section>
+				<h2>Katie Fenn</h2>
+				<br><small>Memory: Don't Forget to Take Out the Garbage</small><br>
+				<img src="deallocation.png" alt="" width="500px" height="AUTO">
+			</section>
+
+			<section>
+				<h2>Vitaly Friedman</h2>
+				<br><small>Designing and Building With Privacy In Mind</small><br>
+				<p>Protect your data!</p>
+				<p></p>
+				<a href="https://www.cookiebot.com/en/gdpr-cookies/">GDPR</a>
+
+			</section>
+
+
+
+
+
+			<section>
+				<small>Tänan, et leidsid aega lugemiseks!</small>
+				<small>Roland</small>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [{
+				src: 'lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'plugin/zoom-js/zoom.js',
+				async: true,
+				condition: function () {
+					return !!document.body.classList;
+				}
+			},
+			{
+				src: 'plugin/notes/notes.js',
+				async: true,
+				condition: function () {
+					return !!document.body.classList;
+				}
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>

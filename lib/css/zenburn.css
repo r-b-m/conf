@@ -1,0 +1,452 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+pre code {
+  display: block; padding: 0.5em;
+  background: #3F3F3F;
+  color: #DCDCDC;
+}
+
+pre .keyword,
+pre .tag,
+pre .css .class,
+pre .css .id,
+pre .lisp .title,
+pre .nginx .title,
+pre .request,
+pre .status,
+pre .clojure .attribute {
+  color: #E3CEAB;
+}
+
+pre .django .template_tag,
+pre .django .variable,
+pre .django .filter .argument {
+  color: #DCDCDC;
+}
+
+pre .number,
+pre .date {
+  color: #8CD0D3;
+}
+
+pre .dos .envvar,
+pre .dos .stream,
+pre .variable,
+pre .apache .sqbracket {
+  color: #EFDCBC;
+}
+
+pre .dos .flow,
+pre .diff .change,
+pre .python .exception,
+pre .python .built_in,
+pre .literal,
+pre .tex .special {
+  color: #EFEFAF;
+}
+
+pre .diff .chunk,
+pre .subst {
+  color: #8F8F8F;
+}
+
+pre .dos .keyword,
+pre .python .decorator,
+pre .title,
+pre .haskell .type,
+pre .diff .header,
+pre .ruby .class .parent,
+pre .apache .tag,
+pre .nginx .built_in,
+pre .tex .command,
+pre .prompt {
+    color: #efef8f;
+}
+
+pre .dos .winutils,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .string {
+  color: #DCA3A3;
+}
+
+pre .diff .deletion,
+pre .string,
+pre .tag .value,
+pre .preprocessor,
+pre .built_in,
+pre .sql .aggregate,
+pre .javadoc,
+pre .smalltalk .class,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .css .rules .value,
+pre .attr_selector,
+pre .pseudo,
+pre .apache .cbracket,
+pre .tex .formula {
+  color: #CC9393;
+}
+
+pre .shebang,
+pre .diff .addition,
+pre .comment,
+pre .java .annotation,
+pre .template_comment,
+pre .pi,
+pre .doctype {
+  color: #7F9F7F;
+}
+
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.5;
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+h2.title-card {
+  pointer-events: none;
+}
+h1.card-h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color:#bb3e25;
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  background-color: #e6e5e1;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.container .card:hover{
+  background:#F4296F;
+}
+.container .card2:hover{
+  background: #ff8654;
+}
+.container .card .card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.container .card:before {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #e6e5e1;
+}
+.container .card:after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #e6e5e1;
+}
+.container .card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  background: black;
+  padding: 5px;
+}
+.container .card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.container .card p {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container .card .pic {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.container .card .social {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.container .card:hover p {
+  color: #fff;
+}
+.container .card:hover .pic {
+  filter: grayscale(0);
+}
+.container .card2 button {
+  background-color: #2b26c3;
+}
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+.sign_board {
+  position: relative;
+  width: 46rem;
+  height: 18rem;
+  top: -115px;
+  left: -293px;
+  background: #016334;
+  border: 0.6rem solid #f5f0ca;
+  transform: translate(0, 0) scale(0.2);
+  border-radius: 3px;
+}
+.sign_board__link {
+  position: fixed!important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 60px;
+  z-index: 9999;
+  display: block;
+}
+.sign_board .arrow {
+  position: absolute;
+  width: 9rem;
+  height: 3rem;
+  top: 50%;
+  left: 3.5rem;
+  transform: translateY(-50%);
+  background: #f5f0ca;
+}
+.sign_board .arrow:before, .sign_board .arrow:after {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height: 5rem;
+  top: -3.5rem;
+  left: auto;
+  transform: skew(-40deg);
+  background: #f5f0ca;
+}
+.sign_board .arrow:after {
+  transform: skew(40deg);
+  top: 1.5rem;
+}
+.sign_board .door {
+  position: absolute;
+  width: 12rem;
+  height: calc(100% - 2rem);
+  top: 50%;
+  left: 15rem;
+  transform: translateY(-50%);
+  background: #f5f0ca;
+  border-radius: 0 0 0 30px;
+}
+.sign_board .door:after {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 1.5rem solid transparent;
+  border-bottom-color: #f5f0ca;
+  position: absolute;
+  bottom: 0;
+  right: -1.5rem;
+}
+.sign_board .door .man .head {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 1rem;
+  left: 2.5rem;
+  border-radius: 100%;
+  background: #016334;
+}
+.sign_board .door .man .torso {
+  position: absolute;
+  width: 2.5rem;
+  height: 6rem;
+  top: 3.4rem;
+  left: 4.8rem;
+  border-radius: 30px;
+  background: #016334;
+  transform: rotate(-30deg);
+}
+.sign_board .door .man .hand {
+  position: absolute;
+  width: 1rem;
+  height: 4rem;
+  top: 3.8rem;
+  left: 3.2rem;
+  border-radius: 30px;
+  background: #016334;
+  transform: rotate(30deg);
+}
+.sign_board .door .man .hand:after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 2.5rem;
+  top: 2.8rem;
+  left: -0.9rem;
+  background: #016334;
+  border-radius: 30px;
+  transform: rotate(60deg);
+}
+.sign_board .door .man .hand.right {
+  top: 2.1rem;
+  left: 6.5rem;
+  transform: rotate(270deg);
+}
+.sign_board .door .man .hand.right:after {
+  top: 2.7rem;
+  left: -0.8rem;
+  height: 3rem;
+  transform: rotate(50deg);
+}
+.sign_board .door .man .leg {
+  position: absolute;
+  width: 1.3rem;
+  height: 6rem;
+  top: 7.5rem;
+  left: 5rem;
+  background: #016334;
+  border-radius: 30px;
+  transform: rotate(30deg);
+}
+.sign_board .door .man .leg:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 3rem;
+  top: 4.2rem;
+  left: 0.8rem;
+  background: #016334;
+  border-radius: 30px;
+  transform: rotate(-70deg);
+}
+.sign_board .door .man .leg.right {
+  position: absolute;
+  width: 1.3rem;
+  height: 4.5rem;
+  top: 7.2rem;
+  left: 7.6rem;
+  transform: rotate(-25deg);
+}
+.sign_board .door .man .leg.right:after {
+  position: absolute;
+  width: 1.3rem;
+  height: 4rem;
+  top: 2.5rem;
+  left: 1.3rem;
+  transform: rotate(-65deg);
+}
+.sign_board .text {
+  position: absolute;
+  width: 16rem;
+  height: auto;
+  top: 50%;
+  left: auto;
+  text-transform: uppercase;
+  font-family: arial;
+  right: 1.5rem;
+  color: #f5f0ca;
+  font-weight: 600;
+  letter-spacing: 5px;
+  transform: translateY(-50%);
+  text-align: left;
+  font-size: 4rem;
+}
